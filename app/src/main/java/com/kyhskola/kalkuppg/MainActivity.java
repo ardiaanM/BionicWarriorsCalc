@@ -14,5 +14,10 @@ public class MainActivity extends AppCompatActivity {
 
     /* hej bionic warriors, jag vill se om den här funkar.
     funkar det?
+
+    hej testar
     */
+
+
+
 }
