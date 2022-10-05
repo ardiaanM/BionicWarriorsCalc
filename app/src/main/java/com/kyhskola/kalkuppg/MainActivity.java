@@ -11,4 +11,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    /* hej bionic warriors, jag vill se om den här funkar.
+    funkar det?
+    */
 }
