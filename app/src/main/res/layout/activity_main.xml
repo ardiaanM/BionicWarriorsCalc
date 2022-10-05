@@ -192,13 +192,12 @@
                 android:id="@+id/buttonBack"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:text="B EDIT"
-                android:fontFamily="monospace"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
                 android:background="@color/lightblack"
-                android:gravity="center"/>
+                android:drawableTop="@drawable/backspace"
+                android:drawableTint="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:paddingTop="25dp"/>
 
             <android.widget.Button
                 android:id="@+id/button9"
