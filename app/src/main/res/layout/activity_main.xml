@@ -175,12 +175,13 @@
                 android:id="@+id/buttonZero"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:text="0"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
                 android:background="@color/lightblack"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:onClick="Click"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
