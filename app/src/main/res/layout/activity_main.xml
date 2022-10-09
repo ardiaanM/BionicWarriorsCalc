@@ -69,7 +69,7 @@
                 android:fontFamily="monospace"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="C"
+                android:text="@string/cbutton"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -81,7 +81,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="7"
+                android:text="@string/seven"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -93,7 +93,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="4"
+                android:text="@string/four"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -105,7 +105,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="1"
+                android:text="@string/one"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -117,7 +117,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="00"
+                android:text="@string/doublezero"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -139,7 +139,7 @@
                 android:fontFamily="monospace"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="%"
+                android:text="@string/percent"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -151,7 +151,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="8"
+                android:text="@string/eight"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -163,7 +163,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="5"
+                android:text="@string/five"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -175,7 +175,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="2"
+                android:text="@string/two"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -187,7 +187,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="0"
+                android:text="@string/zero"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -220,7 +220,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="9"
+                android:text="@string/nine"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -232,7 +232,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="6"
+                android:text="@string/six"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -244,7 +244,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="3"
+                android:text="@string/three"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -256,7 +256,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="."
+                android:text="@string/dot"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -278,7 +278,7 @@
                 android:fontFamily="monospace"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="÷"
+                android:text="@string/divide"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -290,7 +290,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="*"
+                android:text="@string/multi"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -302,7 +302,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="-"
+                android:text="@string/sub"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -314,7 +314,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="+"
+                android:text="@string/add"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -326,7 +326,7 @@
                 android:background="@color/lightblack"
                 android:gravity="center"
                 android:onClick="Click"
-                android:text="="
+                android:text="@string/equals"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
