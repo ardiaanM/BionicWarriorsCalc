@@ -9,17 +9,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button bt0, bt1, bt2, bt3, bt4, bt5, bt6,
-            bt7, bt8, bt9, btPlus, btSub, btDiv,
-            btMulti, btC, btEqu;
+    Button bt0, bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, btPlus, btSub, btDiv, btMulti, btC, btEqu;
 
-    EditText numberInput;
+    TextView historyTextView;
+    TextView numberInput;
 
-    float mValueOne, mValueTwo;
-
-    boolean Addition, Subtract, Multiplication, Division;
+    ArrayList<String> history = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,86 +47,69 @@ public class MainActivity extends AppCompatActivity {
         Button btC = (Button) findViewById(R.id.buttonC);
         Button btDot = (Button) findViewById(R.id.buttonDot);
         Button btBack = (Button) findViewById(R.id.buttonBack);
-        numberInput = (EditText) findViewById(R.id.numberInput);
+        numberInput = (TextView) findViewById(R.id.numberInput);
+        historyTextView = (TextView) findViewById(R.id.history);
 
         bt1.setOnClickListener(new View.OnClickListener() {
-
-
             public void onClick(View v) {
-
+                numberInput.setText(numberInput.getText() + "1");
             }
-
         });
-        bt2.setOnClickListener(new View.OnClickListener() {
 
+        bt2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "2");
             }
         });
-        bt3.setOnClickListener(new View.OnClickListener() {
 
+        bt3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "3");
             }
         });
-        bt4.setOnClickListener(new View.OnClickListener() {
 
+        bt4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "4");
             }
         });
-        bt5.setOnClickListener(new View.OnClickListener() {
 
+        bt5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "5");
             }
         });
         bt6.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "6");
             }
         });
         bt7.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "7");
             }
-
         });
         bt8.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "8");
             }
         });
         bt9.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "9");
             }
         });
         bt0.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "0");
             }
         });
         btDot.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + ".");
             }
         });
-
-        bt1.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                numberInput.setText(numberInput.getText() + "1");
-            }
-        });
         bt00.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
                 numberInput.setText(numberInput.getText() + "00");
             }
@@ -135,75 +117,90 @@ public class MainActivity extends AppCompatActivity {
 
 
         btPlus.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
-                if (numberInput == null) {
-                    numberInput.setText("");
-                } else {
-                    mValueOne = Float.parseFloat(numberInput.getText() + "");
-                    Addition = true;
-                    numberInput.setText(null);
+                if (numberInput.length() > 0) {
+                    history.add(numberInput.getText().toString());
+                    history.add("+");
+                    UpdateHistoryTextView();
+                    ClearNumberInputView();
                 }
             }
         });
+
         btSub.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(numberInput.getText() + "");
-                Subtract = true;
-                numberInput.setText(null);
+                if (numberInput.length() > 0) {
+                    history.add(numberInput.getText().toString());
+                    history.add("-");
+                    UpdateHistoryTextView();
+                    ClearNumberInputView();
+                }
             }
         });
+
         btMulti.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(numberInput.getText() + "");
-                Multiplication = true;
-                numberInput.setText(null);
+                if (numberInput.length() > 0) {
+                    history.add(numberInput.getText().toString());
+                    history.add("*");
+                    UpdateHistoryTextView();
+                    ClearNumberInputView();
+                }
             }
         });
+
         btDiv.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
-                mValueOne = Float.parseFloat(numberInput.getText() + "");
-                Division = true;
-                numberInput.setText(null);
+                if (numberInput.length() > 0) {
+                    history.add(numberInput.getText().toString());
+                    history.add("/");
+                    UpdateHistoryTextView();
+                    ClearNumberInputView();
+                }
             }
         });
-
 
         btEqu.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
-                mValueTwo = Float.parseFloat(numberInput.getText() + "");
-                if (Addition == true) {
-                    numberInput.setText(mValueOne + mValueTwo + "");
-                    Addition = false;
-                }
-                if (Subtract == true) {
-                    numberInput.setText(mValueOne - mValueTwo + "");
-                    Subtract = false;
-                }
-                if (Multiplication == true) {
-                    numberInput.setText(mValueOne * mValueTwo + "");
-                    Multiplication = false;
-                }
-                if (Division == true) {
-                    numberInput.setText(mValueOne / mValueTwo + "");
-                    Division = false;
+
+            }
+        });
+
+        btBack.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String numberString = numberInput.getText().toString();
+
+                if (numberString.length() > 0) {
+                    numberInput.setText(numberString.substring(0, numberString.length() - 1));
                 }
             }
         });
+
         btC.setOnClickListener(new View.OnClickListener() {
-
             public void onClick(View v) {
-                numberInput.setText("");
+                ClearNumberInputView();
+                historyTextView.setText("");
+                history.clear();
             }
         });
-
-        int num0 = Integer.parseInt(bt0.getText().toString());
     }
 
+    private void UpdateHistoryTextView() {
+        ClearHistoryTextView();
+        int arraySize = history.size();
+        for (int i = 0; i < arraySize; i++) {
+            historyTextView.append(history.get(i));
+        }
+    }
 
+    private void ClearNumberInputView() {
+        numberInput.setText("");
+    }
+
+    private void ClearHistoryTextView() {
+        historyTextView.setText("");
+    }
 
 }
