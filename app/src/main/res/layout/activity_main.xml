@@ -96,7 +96,6 @@
                 android:background="@color/lightblack"
                 android:fontFamily="monospace"
                 android:gravity="center"
-                android:onClick="Click"
                 android:text="@string/par1"
                 android:textColor="@color/white"
                 android:textSize="30sp"
@@ -163,13 +162,11 @@
 
 
             <android.widget.Button
-                android:id="@+id/buttonPercent"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="@color/lightblack"
                 android:fontFamily="monospace"
                 android:gravity="center"
-                android:onClick="Click"
                 android:text="@string/percent"
                 android:textColor="@color/white"
                 android:textSize="30sp"
@@ -182,7 +179,6 @@
                 android:background="@color/lightblack"
                 android:fontFamily="monospace"
                 android:gravity="center"
-                android:onClick="Click"
                 android:text="@string/par2"
                 android:textColor="@color/white"
                 android:textSize="30sp"
