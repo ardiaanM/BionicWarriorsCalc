@@ -22,6 +22,10 @@
     <string name="dot">.</string>
     <string name="percent">%</string>
     <string name="back">4</string>
+    <string name="par1">(</string>
+    <string name="par2">)</string>
+    <string name="sqroot">√ </string>
+    <string name="pi">π</string>
 
 
 </resources>

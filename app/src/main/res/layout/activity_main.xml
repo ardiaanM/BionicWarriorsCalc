@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/darkgrey">
+    android:background="@color/darkgrey"
+    android:focusableInTouchMode="false">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginBottom="10dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:layout_above="@id/buttonlayout">
 
         <TextView
@@ -61,13 +64,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:focusableInTouchMode="false">
+
 
             <android.widget.Button
                 android:id="@+id/buttonC"
@@ -78,6 +85,19 @@
                 android:gravity="center"
                 android:onClick="Click"
                 android:text="@string/cbutton"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <android.widget.Button
+                android:id="@+id/buttonPar1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/lightblack"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:onClick="Click"
+                android:text="@string/par1"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -137,7 +157,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
 
             <android.widget.Button
                 android:id="@+id/buttonPercent"
@@ -148,6 +171,19 @@
                 android:gravity="center"
                 android:onClick="Click"
                 android:text="@string/percent"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <android.widget.Button
+                android:id="@+id/buttonPar2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/lightblack"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:onClick="Click"
+                android:text="@string/par2"
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -207,7 +243,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
 
             <android.widget.Button
                 android:id="@+id/buttonBack"
@@ -220,6 +258,19 @@
                 android:onClick="Click"
                 android:paddingTop="25dp"
                 android:textStyle="bold" />
+
+            <android.widget.Button
+                android:id="@+id/buttonPi"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/lightblack"
+                android:gravity="center"
+                android:onClick="Click"
+                android:text="@string/pi"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
 
             <android.widget.Button
                 android:id="@+id/button9"
@@ -276,7 +327,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <android.widget.Button
+                android:id="@+id/buttonSqr"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/lightblack"
+                android:gravity="center"
+                android:onClick="Click"
+                android:text="@string/sqroot"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <android.widget.Button
                 android:id="@+id/buttonDivision"
@@ -290,6 +355,7 @@
                 android:textColor="@color/white"
                 android:textSize="30sp"
                 android:textStyle="bold" />
+
 
             <android.widget.Button
                 android:id="@+id/buttonMultiplication"
